@@ -1,26 +1,27 @@
 """Simulador interactivo de Física 2 – Electricidad y Magnetismo.
 Ejecutar:  python main.py
 
-Para agregar una unidad nueva (p. ej. la Unidad 4): crea interfaz/unidad4.py con una
-clase ttk.Frame y añádela a la lista UNIDADES de abajo."""
+"""
 import tkinter as tk
 from tkinter import ttk
 
 from interfaz.unidad1 import Unidad1
 from interfaz.unidad2 import Unidad2
 from interfaz.unidad3 import Unidad3
+from interfaz.unidad4 import Unidad4
 
 UNIDADES = [
     ("Unidad 1 · Campo eléctrico y potencial", Unidad1),
     ("Unidad 2 · Capacitores y dieléctricos", Unidad2),
     ("Unidad 3 · Corriente y Ley de Ohm", Unidad3),
+    ("Unidad 4 · Fuerza y campo magnético", Unidad4),
 ]
 
 
 class Principal(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Simulador de Física 2 – Campos eléctricos, capacitores y circuitos")
+        self.title("Simulador de Física 2 – Electricidad y magnetismo")
         self.geometry("1250x800")
         self.minsize(1000, 650)
         self.nb = ttk.Notebook(self)
