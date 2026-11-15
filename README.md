@@ -1,6 +1,6 @@
 # Simulador de Física 2 – Electricidad y Magnetismo
 
-Programa único con las unidades 1, 2 y 3 (pestañas).
+Programa único con las unidades 1 a 4 (pestañas).
 
 ## Ejecutar
     pip install -r requirements.txt
@@ -16,12 +16,17 @@ Programa único con las unidades 1, 2 y 3 (pestañas).
         trayectoria.py      U1: partícula cargada (SciPy solve_ivp)
         capacitores.py      U2: capacitancia, dieléctricos, energía
         circuitos.py        U3: serie / paralelo / mixto, Ley de Ohm
+        magnetismo.py       U4: campos magnéticos y fuerza de Lorentz
     interfaz/            Tkinter + Matplotlib
-        unidad1.py  unidad2.py  unidad3.py  graficos_campo.py
-    tests/test_fisica.py Validación numérica de las tres unidades
+        unidad1.py  unidad2.py  unidad3.py  unidad4.py  graficos_campo.py
+    tests/test_fisica.py Validación numérica de las unidades 1 a 3
+    tests/test_magnetismo.py Validación numérica de la Unidad 4
 
-## Agregar la Unidad 4
-Crear interfaz/unidad4.py con una clase `ttk.Frame` y añadirla a la lista UNIDADES de main.py.
+## Unidad 4 — Fuerza y campo magnético
+- El imán de barra abre por defecto. Usa **Girar imán** para invertir los polos y las flechas.
+- El alambre recto representa un conductor ideal infinito en el eje z. Cambia la corriente y su sentido y usa **Dibujar**.
+- En **Fuerza de Lorentz** puedes cargar campos cruzados u órbita circular y modificar los parámetros en unidades SI.
+- Ejecuta `python -m unittest tests.test_magnetismo` para comprobar los cálculos de la Unidad 4.
 
 ## Crear el .exe (Windows)
     pip install pyinstaller
